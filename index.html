@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Таймер з повідомленням</title>
+    <script>
+      let timeoutId;
+
+      function startTimer() {
+        timeoutId = setTimeout(function () {
+          alert("Час минув!");
+        }, 5000);
+      }
+
+      function stopTimer() {
+        clearTimeout(timeoutId);
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="startTimer()">Запуск</button>
+    <button onclick="stopTimer()">Зупинити</button>
+  </body>
+</html>

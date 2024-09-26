@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Зміна кольору фону</title>
+    <script>
+      function changeBackgroundColor() {
+        const randomColor =
+          "#" + Math.floor(Math.random() * 16777215).toString(16);
+        document.body.style.backgroundColor = randomColor;
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="changeBackgroundColor()">Змінити колір фону</button>
+  </body>
+</html>

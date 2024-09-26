@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Показати/Приховати текст</title>
+    <script>
+      function toggleText() {
+        const text = document.getElementById("text");
+        text.style.display = text.style.display === "none" ? "block" : "none";
+      }
+    </script>
+  </head>
+  <body>
+    <p id="text">Це текст, який можна приховати або показати.</p>
+    <button onclick="toggleText()">Показати/Приховати текст</button>
+  </body>
+</html>

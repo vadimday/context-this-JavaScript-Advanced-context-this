@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Миготіння заголовка</title>
+    <script>
+      let intervalId;
+
+      function startBlinking() {
+        intervalId = setInterval(function () {
+          const randomColor =
+            "#" + Math.floor(Math.random() * 16777215).toString(16);
+          document.getElementById("header").style.color = randomColor;
+        }, 500);
+      }
+
+      function stopBlinking() {
+        clearInterval(intervalId);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="header">Заголовок, що змінює колір</h1>
+    <button onclick="startBlinking()">Запуск миготіння</button>
+    <button onclick="stopBlinking()">Зупинити миготіння</button>
+  </body>
+</html>

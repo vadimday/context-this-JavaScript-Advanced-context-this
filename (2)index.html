@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Таймер</title>
+    <script>
+      let intervalId;
+      let count = 0;
+
+      function startTimer() {
+        intervalId = setInterval(function () {
+          document.getElementById("timer").innerText = count++;
+        }, 1000);
+      }
+
+      function stopTimer() {
+        clearInterval(intervalId);
+      }
+
+      function resetTimer() {
+        clearInterval(intervalId);
+        count = 0;
+        document.getElementById("timer").innerText = count;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="timer">0</div>
+    <button onclick="startTimer()">Запуск</button>
+    <button onclick="stopTimer()">Зупинити</button>
+    <button onclick="resetTimer()">Скинути</button>
+  </body>
+</html>
